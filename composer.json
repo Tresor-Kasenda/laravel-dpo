@@ -1,0 +1,65 @@
+{
+    "name": "scott/laravel-dpo",
+    "type": "library",
+    "license": "MIT",
+    "description": "Laravel DPO is a package that allows you to integrate the DPO payment gateway into your Laravel application.",
+    "keywords": [
+        "laravel",
+        "dpo",
+        "payment",
+        "gateway"
+    ],
+    "authors": [
+        {
+            "name": "Tresor-Kasenda",
+            "email": "scotttresor@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Scott\\LaravelDpo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Scott\\LaravelDpo\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.0|^8.1",
+        "spatie/laravel-package-tools": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "*",
+        "pestphp/pest": "^2.7",
+        "pestphp/pest-plugin-faker": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "laravel/pint": "^1.10"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Scott\\LaravelDpo\\LaravelDpoServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "pint": "pint",
+        "test:unit": "pest --colors=always",
+        "test:pint": "pint --test",
+        "test": [
+            "@test:unit",
+            "@test:pint"
+        ]
+    }
+}
