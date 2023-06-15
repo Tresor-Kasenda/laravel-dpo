@@ -14,4 +14,6 @@ return [
     'test_mode' => env('DPO_TEST_MODE', true),
     'back_url' => env('DPO_BACK_URL'),
     'redirect_url' => env('DPO_REDIRECT_URL'),
+    'test_url' => 'https://secure1.sandbox.directpay.online',
+    'live_url' => 'https://secure.3gdirectpay.com',
 ];

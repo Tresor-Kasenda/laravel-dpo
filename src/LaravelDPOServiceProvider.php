@@ -2,6 +2,9 @@
 
 namespace Scott\LaravelDpo;
 
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+
 class LaravelDPOServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
@@ -9,7 +12,6 @@ class LaravelDPOServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-dpo')
             ->hasConfigFile()
-            ->hasMigration('create_laravel-dpo_table')
-            ->hasCommand(LaravelDPOCommand::class);
+            ->hasMigration('create_laravel_dpo_table');
     }
 }
